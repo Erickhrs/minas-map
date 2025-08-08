@@ -29,19 +29,19 @@
 				.str8 {stroke:#1F1A17; stroke-width:706;}
 				.str7 {stroke:#D82B40; stroke-width:1058;}
 				.fil3 {fill:none;}
-				.fil10 {fill:#ECECEB;}
-				.fil6 {fill:#84C225;}
-				.fil4 {fill:#99AE6A;}
-				.fil8 {fill:#E87877;}
-				.fil7 {fill:#F8C300;}
-				.fil5 {fill:#FFF974;}
-				.fil9 {fill:#FFFFFF;}
-				.fil0 {fill:#9DBDDD;}
-				.fil1 {fill:#FFFFFF;}
-				.fil2 {fill:#F6EAD9;}
-				.fil12 {fill:#D82B40;}
-				.fil11 {fill:#ECECEB;}
-				.fil13 {fill:#0075C8;}
+				.fil10 {fill:#cc0000;}
+				.fil6 {fill:#cc0000;}
+				.fil4 {fill:#cc0000;}
+				.fil8 {fill:#cc0000;}
+				.fil7 {fill:#cc0000;}
+				.fil5 {fill:#cc0000;}
+				.fil9 {fill:#cc0000;}
+				.fil0 {fill:#cc0000;}
+				.fil1 {fill:#cc0000;}
+				.fil2 {fill:#cc0000;}
+				.fil12 {fill:#cc0000;}
+				.fil11 {fill:#cc0000;}
+				.fil13 {fill:#cc0000;}
 
 				.fonte,
 				.tooltip {font-size: 350em; fill:#888888;}
@@ -90,18 +90,18 @@
 				];
 
 				var meso = [
-					{ "codigo": "3111", "nome": "CAMPO DAS VERTENTES", "valor": "0" },
-					{ "codigo": "3106", "nome": "CENTRAL MINEIRA", "valor": "0" },
-					{ "codigo": "3103", "nome": "JEQUITINHONHA", "valor": "0" },
-					{ "codigo": "3107", "nome": "METROPOLITANA DE BELO HORIZONTE", "valor": "0" },
-					{ "codigo": "3101", "nome": "NOROESTE DE MINAS", "valor": "0" },
-					{ "codigo": "3102", "nome": "NORTE DE MINAS", "valor": "0" },
-					{ "codigo": "3109", "nome": "OESTE DE MINAS", "valor": "0" },
-					{ "codigo": "3110", "nome": "SUL/SUDOESTE DE MINAS", "valor": "0" },
-					{ "codigo": "3105", "nome": "TRIANGULO MINEIRO/ALTO PARANAIBA", "valor": "0" },
-					{ "codigo": "3104", "nome": "VALE DO MUCURI", "valor": "0" },
-					{ "codigo": "3108", "nome": "VALE DO RIO DOCE", "valor": "0" },
-					{ "codigo": "3112", "nome": "ZONA DA MATA", "valor": "0" }
+					{ "codigo": "3111", "nome": "CAMPO DAS VERTENTES", "valor": "" },
+					{ "codigo": "3106", "nome": "CENTRAL MINEIRA", "valor": "" },
+					{ "codigo": "3103", "nome": "JEQUITINHONHA", "valor": "" },
+					{ "codigo": "3107", "nome": "METROPOLITANA DE BELO HORIZONTE", "valor": "" },
+					{ "codigo": "3101", "nome": "NOROESTE DE MINAS", "valor": "" },
+					{ "codigo": "3102", "nome": "NORTE DE MINAS", "valor": "" },
+					{ "codigo": "3109", "nome": "OESTE DE MINAS", "valor": "" },
+					{ "codigo": "3110", "nome": "SUL/SUDOESTE DE MINAS", "valor": "" },
+					{ "codigo": "3105", "nome": "TRIANGULO MINEIRO/ALTO PARANAIBA", "valor": "" },
+					{ "codigo": "3104", "nome": "VALE DO MUCURI", "valor": "" },
+					{ "codigo": "3108", "nome": "VALE DO RIO DOCE", "valor": "" },
+					{ "codigo": "3112", "nome": "ZONA DA MATA", "valor": "" }
 				];
 
 				function init(evt) {
@@ -119,7 +119,7 @@
 									unidadefederal.setAttributeNS(null, "valor", ufs[i].valor);
 									unidadefederal.setAttributeNS(null, "class", "hoverUF fil13 str4");	
 
-									unidadefederal.addEventListener("mouseenter", function(e) {
+									unidadefederal.addEventListener("click", function(e) {
 										var texto = e.target.getAttributeNS(null, "nome") +" - "+	e.target.getAttributeNS(null, "valor");
 										DisplayName(texto);
 										texto = e.target.getAttributeNS(null, "uf") +" - "+	e.target.getAttributeNS(null, "valor");
@@ -146,7 +146,7 @@
 								mesorreg.setAttributeNS(null, "nome", meso[i].nome);
 								mesorreg.setAttributeNS(null, "valor", meso[i].valor);
 
-								mesorreg.addEventListener("mouseenter", function(e) {
+								mesorreg.addEventListener("click", function(e) {
 									var texto = e.target.getAttributeNS(null, "nome");
 									DisplayName(texto);
 									//ShowTooltip(e, texto);
@@ -164,7 +164,7 @@
 								txtNumero.setAttributeNS(null, "nome", meso[i].nome);
 								txtNumero.setAttributeNS(null, "valor", meso[i].valor);
 
-								txtNumero.addEventListener("mouseenter", function(e) {
+								txtNumero.addEventListener("click", function(e) {
 									var texto = e.target.getAttributeNS(null, "nome");
 									DisplayName(texto);
 								}, true);
@@ -181,7 +181,8 @@
 				};
 
 				function DisplayName(txt) {
-					svgDoc.getElementById('path_name').firstChild.data = txt;
+					//svgDoc.getElementById('path_name').firstChild.data = txt;
+					window.open('./' + encodeURIComponent(txt), '_blank');
 				};
 
 				function ShowTooltip(evt, txt) {
