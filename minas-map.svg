@@ -29,19 +29,19 @@
 				.str8 {stroke:#1F1A17; stroke-width:706;}
 				.str7 {stroke:#D82B40; stroke-width:1058;}
 				.fil3 {fill:none;}
-				.fil10 {fill:#cc0000;}
-				.fil6 {fill:#cc0000;}
-				.fil4 {fill:#cc0000;}
-				.fil8 {fill:#cc0000;}
-				.fil7 {fill:#cc0000;}
-				.fil5 {fill:#cc0000;}
-				.fil9 {fill:#cc0000;}
-				.fil0 {fill:#cc0000;}
-				.fil1 {fill:#cc0000;}
-				.fil2 {fill:#cc0000;}
-				.fil12 {fill:#cc0000;}
-				.fil11 {fill:#cc0000;}
-				.fil13 {fill:#cc0000;}
+				.fil10 {fill:#720203;}
+				.fil6 {fill:#720203;}
+				.fil4 {fill:#720203;}
+				.fil8 {fill:#720203;}
+				.fil7 {fill:#720203;}
+				.fil5 {fill:#720203;}
+				.fil9 {fill:#720203;}
+				.fil0 {fill:#720203;}
+				.fil1 {fill:#720203;}
+				.fil2 {fill:#720203;}
+				.fil12 {fill:#720203;}
+				.fil11 {fill:#720203;}
+				.fil13 {fill:#720203;}
 
 				.fonte,
 				.tooltip {font-size: 350em; fill:#888888;}
@@ -308,7 +308,7 @@
 
 	
 
-	<text id="path_name" class="legend" x="127000" y="-3000">MINAS GERAIS</text>
+	<text id="path_name" class="legend" x="127000" y="-3000"></text>
 	<rect class="tooltip_bg" id="tooltip_bg" x="0" y="0" rx="40" ry="40" width="52000" height="9000" visibility="hidden"/>
 	<text class="tooltip" id="tooltip" x="0" y="0" visibility="hidden">Tooltip</text>
 	O seu navegador nÃ£o suporta esta renderizaÃ§Ã£o de SVG.
